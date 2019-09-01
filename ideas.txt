@@ -1,2 +1,9 @@
 https://www.youtube.com/watch?v=0gI4dqQNNss
 this link describes how to compare sentences using euclidean distance - used to find sentences that are similar in length and vocabulary
+
+https://www.youtube.com/watch?v=6i5bHQZ-c5U
+for single word match ratings
+
+packages:
+recordlinker
+fuzzywuzzy
