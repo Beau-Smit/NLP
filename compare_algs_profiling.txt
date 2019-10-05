@@ -1,0 +1,24 @@
+Timer unit: 3.64672e-07 s
+
+Total time: 0.138749 s
+File: compare_algs.py
+Function: jelly_lev at line 22
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    22                                           @profile
+    23                                           def jelly_lev(str1, str2):
+    24    150000     275826.0      1.8     72.5     distance = jellyfish.levenshtein_distance(str1, str2)
+    25    150000     104649.0      0.7     27.5     return distance
+
+Total time: 2.92883 s
+File: compare_algs.py
+Function: textd_lev at line 29
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    29                                           @profile
+    30                                           def textd_lev(str1, str2):
+    31    150000    7893482.0     52.6     98.3     distance = textdistance.levenshtein.distance(str1, str2)
+    32    150000     137906.0      0.9      1.7     return distance
+
