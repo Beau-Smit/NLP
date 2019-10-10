@@ -3,19 +3,14 @@ import pandas as pd
 import numpy as np
 import jellyfish
 import textdistance
-# import Levenshtein
+import Levenshtein
 
-# python built-ins
-from itertools import groupby
-import time
-
-# CONCLUSION: jellyfish is much faster than textdistance
+# SPEED: Levenshtein, jellyfish, textdistance
 
 # print(jellyfish.soundex('Beau'))
 # print(jellyfish.soundex('Smit'))
 # print(jellyfish.levenshtein_distance('Beau', 'Smit'))
 # print(jellyfish.levenshtein_distance('hi', 'hello'))
-
 
 myseries = pd.Series(['plumbob', 'plumbus', 'plumbing'] * 50000)
 
@@ -33,12 +28,10 @@ def textd_lev(str1, str2):
 
 myseries.apply(textd_lev, str2='plumber')
 
-# @profile
-# def Leven_lev(str1, str2):
-#    distance = Levenshtein.distance(str1, str2)
-#    return distance
+@profile
+def Leven_lev(str1, str2):
+   distance = Levenshtein.distance(str1, str2)
+   return distance
 
-# myseries.apply(Leven_lev, str2='plumber')
-
-
+myseries.apply(Leven_lev, str2='plumber')
 
